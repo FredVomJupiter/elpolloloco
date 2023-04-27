@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Pollo Loco</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="shortcut icon" href="img/6_salsa_bottle/salsa_bottle.png" type="image/x-icon">
+
+    <script src="classes/drawable-object.class.js"></script>
+    <script src="classes/movable-object.class.js"></script>
+    <script src="classes/throwable-object.class.js"></script>
+    <script src="classes/character.class.js"></script>
+    <script src="classes/chicken.class.js"></script>
+    <script src="classes/babychicken.class.js"></script>
+    <script src="classes/coins.class.js"></script>
+    <script src="classes/bottle.class.js"></script>
+    <script src="classes/cloud.class.js"></script>
+    <script src="classes/background.class.js"></script>
+    <script src="classes/keyboard.class.js"></script>
+    <script src="classes/level.class.js"></script>
+    <script src="classes/status-bar.class.js"></script>
+    <script src="classes/endboss.class.js"></script>
+    <script src="levels/level_1.js"></script>
+    <script src="levels/level_2.js"></script>
+    <script src="js/sounds.js"></script>
+    <script src="classes/world.class.js"></script>
+    <script defer src="js/keys.js"></script>
+    <script defer src="js/game.js"></script>
+    
+</head>
+
+<body onload="init()">
+    <div class="level d-none" id="level">Level</div>
+    <div class="seppel" id="seppel" onclick="hideIntroOverlay(event)">
+       <h2>Mouse click to continue</h1>
+
+        <div class="descriptionBtn">?</div>
+        <div class="description hidden">
+            This is a jump an rund game. </br>
+            Collect coins and salsa bottles to defeat manic chickens.</br></br>
+
+            Press A to move left.</br></br>
+            Press D to move right.</br></br>
+            With Space you can jump over and onto little chicken.</br></br>
+            Press E to throw spicy-hot slasa bottles!
+        </div>
+    </div>
+
+    <div class="rüdiger d-none" id="rüdiger" onclick="hideOutroOverlay(event)">
+        <h2>Mouse click to continue</h1>
+    </div>
+        
+    <div class="gameWon d-none" id="gameWon" onclick="hideOutroOverlay(event)">
+        <h2>Mouse click to go back to main menu</h1>
+    </div>
+
+    <div class="dieter" id="dieter"></div>
+
+    <div class="klaus d-none" id="klaus">
+        
+        <div class="descriptionBtn">?</div>
+        <div class="description hidden">
+            This is a jump an rund game. </br>
+            Collect coins and salsa bottles to defeat manic chickens.</br></br>
+
+            Press A to move left.</br></br>
+            Press D to move right.</br></br>
+            With Space you can jump over and onto little chicken.</br></br>
+            Press E to throw spicy-hot slasa bottles!
+        </div>
+        <h1 id="headline">El Pollo Loco</h1>
+        <div id="toggleMusic" onclick="toggleMusic(event)">Toggle Music</div>
+        <div id="startButton" onclick="startGame(event)">Start Game</div>
+        <canvas class="d-none" id="canvas" width="800" height="600">
+    
+        </canvas>
+        <div class="button-container" id="button-container">
+            <div class="button-wrap">
+                <div class="button" id="left">L</div>
+                <div class="button" id="right">R</div>
+            </div>
+
+            <div class="button-wrap">
+                <div class="button" id="jump">J</div>
+                <div class="button" id="throw">T</div>
+            </div>
+        </div>
+        <div class="info">Switch to landscape mode</div>
+    
+        <div class="d-none" id="fps"></div>
+        <div class="d-none" id="key">none</div>
+    </div>
+</body>
+
+</html>

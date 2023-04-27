@@ -1,0 +1,344 @@
+body {
+    margin: 0;
+    font-family: 'Smokum', 'Comic Sans', 'Times New Roman';
+}
+
+@font-face {
+    font-family: 'Smokum';
+    src: url(./font/Smokum-Regular.ttf);
+}
+
+.dieter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-family: 'Smokum', 'Comic Sans', 'Times New Roman';
+    background-image: url("./img/5_background/background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 50%;
+    z-index: 0;
+}
+
+.klaus {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 100%;
+    z-index: 5;
+}
+
+.seppel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url("./img/9_intro_outro_screens/start/startscreen_2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 100%;
+    z-index: 10;
+}
+
+.rüdiger {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url("./img/9_intro_outro_screens/game_over/you lost.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 100%;
+    z-index: 10;
+}
+
+.gameWon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url("./img/9_intro_outro_screens/game_over/game over.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 100%;
+    z-index: 10;
+}
+
+.level {
+    display: flex;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    font-size: 40px;
+    z-index: 50;
+}
+
+.info {
+    display: none;
+}
+
+canvas {
+    background: black;
+    border-radius: 15px;
+    border: 10px solid burlywood;
+    width: 60%;
+}
+
+.descriptionBtn {
+    transition: all 225ms ease-in-out;
+    cursor: pointer;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: orange;
+    border: 1px solid black;
+    color: black;
+    font-size: 24px;
+    z-index: 11;
+}
+
+.description {
+    transition: all 225ms ease-in-out;
+    position: absolute;
+    top: 22%;
+    left: 22%;
+    width: 240px;
+    background: #f4efef;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 24px;
+}
+
+.hidden {
+    transition: all 225ms ease-in-out;
+    translate: -1000px;
+}
+
+.descriptionBtn:hover + .description.hidden {
+    translate: unset;
+}
+
+.descriptionBtn:hover {
+    transition: all 225ms ease-in-out;
+    transform: rotate(180deg);
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    position: absolute;
+    top: 20%;
+}
+
+#fps {
+    color: black;
+    font-family: 'Times New Roman';
+}
+
+#key {
+    color: black;
+    font-family: 'Times New Roman';
+}
+
+#startButton {
+    position: absolute;
+    top: 55%;
+    cursor: pointer;
+    display: flex;
+    background: orange;
+    width: 200px;
+    height: 50px;
+    border: 2px solid orangered;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-family: 'Smokum', 'Comic Sans', 'Times New Roman';
+}
+
+#startButton:hover {
+    transition: all 225ms ease-in-out;
+    width: 210px;
+    height: 55px;
+    font-size: 32px;
+}
+
+#toggleMusic {
+    position: absolute;
+    top: 20%;
+    cursor: pointer;
+    display: flex;
+    background: orange;
+    width: 200px;
+    height: 50px;
+    border: 2px solid orangered;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-family: 'Smokum', 'Comic Sans', 'Times New Roman';
+}
+
+#toggleMusic:hover {
+    transition: all 225ms ease-in-out;
+    width: 210px;
+    height: 55px;
+    font-size: 32px;
+}
+
+.d-none {
+    display: none !important;
+}
+
+.button-container {
+    display: none;
+}
+
+.button {
+    display: none;
+}
+
+
+@media screen and (width < 800px) {
+
+    .descriptionBtn {
+        display: none;
+    }
+
+    .button-container {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        padding: 20px
+    }
+
+    .button-wrap{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .button {
+        display: flex;
+        border-radius: 50%;
+        background: orange;
+        color: black;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        border: 1px solid black;
+    }
+
+    .gameWon {
+        background-size: contain;
+        background-position: center;
+        background-repeat: repeat;
+    }
+    
+}
+
+@media screen and (orientation: portrait) and (width < 800px) {
+    .info {
+        display: flex;
+        font-size: 30px;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        z-index: 50;
+    }
+
+    canvas {
+        position: relative;
+        box-sizing: border-box;
+        width: 100%;
+    }
+}
+
+@media screen and (orientation: landscape) and (width < 800px) {
+    body {
+        overflow-y: hidden;
+    }
+
+    .info {
+        display: none;
+    }
+
+    #toggleMusic {
+        position: absolute !important;
+        top: 5% !important;
+        z-index: 10;
+    }
+
+    canvas {
+        position: relative;
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+    
+    h2 {
+        top: 5%;
+    }
+
+    .button-container {
+        position: absolute;
+        bottom: 0;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        padding: 5px 20px;
+    }
+
+    .button-wrap{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .button {
+        display: flex;
+        border-radius: 50%;
+        background: orange;
+        color: black;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+    }
+}
