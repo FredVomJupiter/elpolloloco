@@ -8,6 +8,7 @@ body {
     src: url(./font/Smokum-Regular.ttf);
 }
 
+/** Dieter manages the background **/
 .dieter {
     position: absolute;
     top: 0;
@@ -24,6 +25,7 @@ body {
     user-zoom: none;
 }
 
+/** Klaus takes care of mobile version **/
 .klaus {
     position: fixed;
     top: 0;
@@ -42,6 +44,7 @@ body {
     -webkit-touch-callout: none;
 }
 
+/** Seppel only shows the startscreen **/
 .seppel {
     position: absolute;
     top: 0;
@@ -59,6 +62,7 @@ body {
     z-index: 10;
 }
 
+/** Rüdiger tells if you lost **/
 .rüdiger {
     position: absolute;
     top: 0;
