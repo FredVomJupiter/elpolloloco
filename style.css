@@ -25,7 +25,7 @@ body {
 }
 
 .klaus {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -37,6 +37,9 @@ body {
     opacity: 100%;
     z-index: 5;
     user-zoom: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
 }
 
 .seppel {
