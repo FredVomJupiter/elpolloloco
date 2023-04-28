@@ -12,8 +12,8 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
+    width: 100%;
+    height: 100vh;
     font-family: 'Smokum', 'Comic Sans', 'Times New Roman';
     background-image: url("./img/5_background/background.jpg");
     background-size: cover;
@@ -21,28 +21,30 @@ body {
     background-repeat: no-repeat;
     opacity: 50%;
     z-index: 0;
+    user-zoom: none;
 }
 
 .klaus {
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
+    width: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     opacity: 100%;
     z-index: 5;
+    user-zoom: none;
 }
 
 .seppel {
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
+    width: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -58,8 +60,8 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
+    width: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -228,6 +230,11 @@ h2 {
 
 .button {
     display: none;
+}
+
+.button span {
+    user-select: none;
+    user-zoom: none;
 }
 
 
