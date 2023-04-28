@@ -235,6 +235,8 @@ h2 {
 .button span {
     user-select: none;
     user-zoom: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
 }
 
 
