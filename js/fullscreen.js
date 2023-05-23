@@ -1,8 +1,7 @@
-window.addEventListener("resize", () => {
-    if (document.fullscreenElement) {
+function makeScreenFull() {
+    if (!document.fullscreenElement) {
+        canvas.requestFullscreen();
+    } else {
         document.exitFullscreen();
     }
-    else {
-        document.documentElement.requestFullscreen();
-    }
-}, false);
+}

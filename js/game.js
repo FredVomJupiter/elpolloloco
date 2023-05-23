@@ -10,6 +10,7 @@ const headline = document.getElementById('headline');
 const buttons = document.getElementById('button-container');
 const description = document.getElementById('description');
 const level = document.getElementById('level');
+const fullscreen = document.getElementById('fullbtn');
 let world;
 let keyboard  = new Keyboard();
 let gameRunning = false;
@@ -50,6 +51,7 @@ function startGame(event) {
         currentLevel = 1;
         canvas.classList.remove('d-none');
         buttons.classList.remove('d-none');
+        fullscreen.classList.remove('d-none');
         initLevel1();
         world = new World(canvas, keyboard, level_1);
         playBackgroundMusicGamestart();
