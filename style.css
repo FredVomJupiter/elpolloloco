@@ -141,21 +141,18 @@ canvas {
     transition: all 225ms ease-in-out;
     position: absolute;
     top: 25%;
-    right: 10%;
+    right: 20%;
     width: 240px;
     background: #f4efef;
     padding: 20px;
     border-radius: 10px;
     font-size: 24px;
+    z-index: 10;
+    transform: translateX(100vw);
 }
 
-.hidden {
-    transition: all 225ms ease-in-out;
-    translate: 1000px;
-}
-
-.descriptionBtn:hover + .description.hidden {
-    translate: unset;
+.descriptionBtn:hover + .description {
+    transform: translateX(0) !important;
 }
 
 .descriptionBtn:hover {
