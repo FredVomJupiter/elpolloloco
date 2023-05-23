@@ -1,9 +1,9 @@
 const canvas = document.getElementById('canvas');
 const startButton = document.getElementById('startButton');
-const klaus = document.getElementById('klaus');
-const dieter = document.getElementById('dieter');
+const mainMenu = document.getElementById('mainMenu');
+const background = document.getElementById('background');
 const welcome = document.getElementById('welcome');
-const rüdiger = document.getElementById('rüdiger');
+const gameLost = document.getElementById('gameLost');
 const gameWon = document.getElementById('gameWon');
 const musicToggleBtn = document.getElementById('toggleMusic');
 const headline = document.getElementById('headline');
@@ -30,7 +30,7 @@ function init() {
 function hideIntroOverlay(event) {
     event.stopPropagation();
     welcome.classList.add('d-none');
-    setTimeout(() => klaus.classList.remove('d-none'), 500);
+    setTimeout(() => mainMenu.classList.remove('d-none'), 500);
     audio_intro.play();
     introMusicPlaying = true;
 }
@@ -84,7 +84,7 @@ function hideOutroOverlay() {
     musicToggleBtn.classList.remove('d-none');
     headline.classList.remove('d-none');
     canvas.classList.add('d-none');
-    rüdiger.classList.add('d-none');
+    gameLost.classList.add('d-none');
     window.location.reload();
 }
 

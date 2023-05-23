@@ -8,8 +8,8 @@ body {
     src: url(./font/Smokum-Regular.ttf);
 }
 
-/** Dieter manages the background **/
-.dieter {
+/** Background for menu and during game **/
+.background {
     position: absolute;
     top: 0;
     left: 0;
@@ -25,8 +25,8 @@ body {
     user-zoom: none;
 }
 
-/** Klaus takes care of mobile version **/
-.klaus {
+/** Main menu **/
+.main-menu {
     position: fixed;
     top: 0;
     left: 0;
@@ -63,8 +63,8 @@ body {
     z-index: 10;
 }
 
-/** Rüdiger tells if you lost **/
-.rüdiger {
+/** GameLost tells if you lost **/
+.game-lost {
     position: absolute;
     top: 0;
     left: 0;
@@ -81,7 +81,7 @@ body {
     z-index: 10;
 }
 
-.gameWon {
+.game-won {
     position: absolute;
     top: 0;
     left: 0;
