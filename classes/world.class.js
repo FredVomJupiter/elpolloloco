@@ -157,7 +157,7 @@ class World {
         this.character.playAnimation(this.character.IMAGES_DEAD);
         this.character.loadImage('img/2_character_pepe/5_dead/D-56.png');
         setTimeout(() => {
-            rüdiger.classList.remove('d-none');
+            gameLost.classList.remove('d-none');
             musicToggleBtn.classList.add('d-none');
         }, 1000);
     }

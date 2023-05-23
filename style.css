@@ -58,7 +58,7 @@ body {
     background-image: url("./img/9_intro_outro_screens/start/startscreen_2.png");
     background-size: cover;
     background-repeat: no-repeat;
-    overflow-x: hidden;
+    overflow: hidden;
     opacity: 100%;
     z-index: 10;
 }
@@ -158,25 +158,6 @@ canvas {
 .descriptionBtn:hover {
     transition: all 225ms ease-in-out;
     transform: rotate(180deg);
-}
-
-.fullscreen {
-    transition: all 225ms ease-in-out;
-    cursor: pointer;
-    position: absolute;
-    top: 20%;
-    right: 15%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: orange;
-    border: 1px solid black;
-    color: black;
-    font-size: 24px;
-    z-index: 11;
 }
 
 h1 {
