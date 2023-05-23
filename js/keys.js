@@ -41,7 +41,9 @@ window.addEventListener("keyup", (event) => {
 });
 
 
-
+/**
+ * Touch EventListener for mobile devices
+ */
 btnLeft.addEventListener("touchstart", (event) => {
     keyboard.LEFT = true;
 });

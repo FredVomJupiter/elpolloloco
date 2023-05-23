@@ -2,7 +2,7 @@ const canvas = document.getElementById('canvas');
 const startButton = document.getElementById('startButton');
 const klaus = document.getElementById('klaus');
 const dieter = document.getElementById('dieter');
-const seppel = document.getElementById('seppel');
+const welcome = document.getElementById('welcome');
 const rüdiger = document.getElementById('rüdiger');
 const gameWon = document.getElementById('gameWon');
 const musicToggleBtn = document.getElementById('toggleMusic');
@@ -29,13 +29,16 @@ function init() {
 
 function hideIntroOverlay(event) {
     event.stopPropagation();
-    seppel.classList.add('d-none');
+    welcome.classList.add('d-none');
     setTimeout(() => klaus.classList.remove('d-none'), 500);
     audio_intro.play();
     introMusicPlaying = true;
 }
 
-
+/**
+ * Starting with level 1
+ * @param {*} event 
+ */
 function startGame(event) {
     event.stopPropagation();
     if (!gameRunning) {
@@ -53,7 +56,9 @@ function startGame(event) {
     }
 }
 
-
+/**
+ * Starting with level 2
+ */
 function startLevel2() {
     setTimeout(() => {
         showLevel("Level 2");
@@ -91,7 +96,7 @@ function showDescription(event) {
 }
 
 /**
- * FPS counter that I found online.
+ * FPS counter 
  */
 function countFPS() {
     const times = [];
